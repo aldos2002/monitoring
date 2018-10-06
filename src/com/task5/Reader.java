@@ -19,7 +19,10 @@ public class Reader {
             while (scan.hasNextLine()) {
                 strings.add(scan.nextLine().substring(0, 3));
             }
+            Thread.sleep(300000);
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
